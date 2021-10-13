@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o bin/mapcutter cmd/main.go
+
+  build_win:
+    cmds:
+      - go build -o bin/mapcutter.exe cmd/main.go
+    env:
+      GOOS: windows
+
+  run:
+    cmds:
+      - go run cmd/main.go
